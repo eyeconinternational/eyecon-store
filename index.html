@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shop premium nuts, honey, dates and value combos at EyeCon Store. Order directly through WhatsApp.">
+<title>EyeCon Store - Goodness, thoughtfully selected</title>
+<link rel="icon" href="assets/eyecon-mark.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="announcement"><div class="announce-inner"><span>✦ Fast Delivery Across India</span><span>✧ Secure Ordering</span><span>▣ Prepaid & Cash on Delivery</span><span>♧ Premium Quality</span><a href="https://wa.me/919072295690" target="_blank">◉ Need help? Chat on WhatsApp</a></div></div>
+<header class="site-header">
+ <a class="logo" href="#home"><img src="assets/eyecon-logo.png" alt="EyeCon International"></a>
+ <nav class="main-nav" id="main-nav"><a class="active" href="#home">Home</a><a href="#combos">Combos <span class="nav-hot">HOT</span></a><a href="#products">Shop</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#footer">Contact</a></nav>
+ <div class="header-actions"><button class="icon-button search-toggle" aria-label="Search" onclick="toggleSearch()">⌕</button><button class="icon-button cart-toggle" aria-label="Open cart" onclick="openCart()">♧ <span id="cart-count">0</span></button><button class="mobile-menu" onclick="document.getElementById('main-nav').classList.toggle('show')">☰</button></div>
+</header>
+<div class="search-bar" id="search-bar"><input id="search-input" type="search" placeholder="Search nuts, honey, dates..." oninput="renderProducts()"><button onclick="document.getElementById('search-bar').classList.remove('show')">Close</button></div>
+<main id="home">
+<section class="hero hero-image" id="hero-banner" aria-label="Featured collections">
+ <picture class="hero-picture">
+  <source id="hero-mobile-source" media="(max-width: 600px)" srcset="assets/banner-combos-mobile.jpg">
+  <img id="hero-img" src="assets/banner-combos.jpg" alt="EyeCon Store value combos featuring premium nuts, honey and dates">
+ </picture>
+ <div class="hero-copy" id="hero-copy">
+  <span class="hero-kicker" id="hero-kicker">CURATED VALUE COMBOS</span>
+  <h1 id="hero-title">A little more goodness.<br><em>All in one box.</em></h1>
+  <p id="hero-description">Thoughtfully paired nuts, honey and premium dates for everyday goodness.</p>
+  <a class="button button-primary hero-shop-now" id="hero-shop-link" href="#combos">Shop Now <span>→</span></a>
+ </div>
+ <button class="hero-arrow left" onclick="changeBanner(-1)" aria-label="Previous banner">‹</button>
+ <button class="hero-arrow right" onclick="changeBanner(1)" aria-label="Next banner">›</button>
+ <div class="hero-dots"><button class="active" onclick="setBanner(0)" aria-label="Combos banner"></button><button onclick="setBanner(1)" aria-label="Nuts banner"></button><button onclick="setBanner(2)" aria-label="Honey banner"></button></div>
+</section>
+<section class="section categories-section" id="categories">
+ <div class="section-title"><div><span class="eyebrow">FIND YOUR FAVOURITES</span><h2>Shop by category</h2></div><a class="view-link" href="#products">Explore all products <b>→</b></a></div>
+ <div class="category-grid">
+  <a class="category-tile combo-tile" href="#combos"><div><span class="tile-index">01 / COLLECTION</span><h3>Combos</h3><p>Value packs & special sets</p><b class="circle-arrow">↗</b></div><img src="assets/cat-combos.png" alt="Gift combo"></a>
+  <a class="category-tile" href="#products" onclick="filterCategory('Nuts')"><div><span class="tile-index">02 / COLLECTION</span><h3>Nuts</h3><p>Almonds, cashews, pistachios & walnuts</p><b class="circle-arrow">↗</b></div><img src="assets/cat-nuts.png" alt="Nuts"></a>
+  <a class="category-tile" href="#products" onclick="filterCategory('Honey')"><div><span class="tile-index">03 / COLLECTION</span><h3>Honey</h3><p>Natural & raw honey</p><b class="circle-arrow">↗</b></div><img src="assets/cat-honey.png" alt="Honey"></a>
+  <a class="category-tile" href="#products" onclick="filterCategory('Dates')"><div><span class="tile-index">04 / COLLECTION</span><h3>Dates</h3><p>Ajwa, Medjool, Sukkari & more</p><b class="circle-arrow">↗</b></div><img src="assets/cat-dates.png" alt="Dates"></a>
+ </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+
+    <div class="trust-item">
+        <img src="assets/icons/premium-quality.png"
+             alt="Premium Quality"
+             class="trust-icon">
+        <p>
+            <b>Premium quality</b>
+            <small>Carefully selected products</small>
+        </p>
+    </div>
+
+    <div class="trust-item">
+        <img src="assets/icons/pan-india-delivery.png"
+             alt="Pan-India Delivery"
+             class="trust-icon">
+        <p>
+            <b>Pan-India delivery</b>
+            <small>Across India</small>
+        </p>
+    </div>
+
+    <div class="trust-item">
+        <img src="assets/icons/simple-ordering.png"
+             alt="Simple Ordering"
+             class="trust-icon">
+        <p>
+            <b>Simple ordering</b>
+            <small>Order securely on WhatsApp</small>
+        </p>
+    </div>
+
+    <div class="trust-item">
+        <img src="assets/icons/flexible-payment.png"
+             alt="Flexible Payment"
+             class="trust-icon">
+        <p>
+            <b>Flexible payment</b>
+            <small>Prepaid or cash on delivery</small>
+        </p>
+    </div>
+
+</section>
+
+
+<!-- SIGNATURE COMBOS SECTION -->
+<section class="section combo-section" id="combos">
+
+    <div class="section-title">
+
+        <div>
+            <span class="eyebrow">CURATED FOR YOU</span>
+
+            <h2>Our Signature Combos</h2>
+
+            <p class="section-sub">
+                A little more goodness, thoughtfully packed together.
+            </p>
+        </div>
+
+        <a class="view-link" href="#combos">
+            View all combos <b>→</b>
+        </a>
+
+    </div>
+
+    <div class="product-grid" id="combo-grid"></div>
+
+</section>
+
+<section class="section" id="products">
+ <div class="section-title product-title"><div><span class="eyebrow">THE EVERYDAY COLLECTION</span><h2>Shop all products</h2><p class="section-sub">Good choices for your everyday pantry.</p></div><input id="product-search" class="product-search" type="search" placeholder="Search products" oninput="renderProducts()"></div>
+ <div class="filter-tabs"><button class="selected" data-filter="All" onclick="filterCategory('All')">All products</button><button data-filter="Nuts" onclick="filterCategory('Nuts')">Nuts</button><button data-filter="Honey" onclick="filterCategory('Honey')">Honey</button><button data-filter="Dates" onclick="filterCategory('Dates')">Dates</button></div>
+ <div class="product-grid" id="product-grid"></div>
+</section>
+<section class="section collection-section"><div class="collection-card"><img src="assets/collection-nuts.jpg" alt="Nuts collection"><div><span class="eyebrow">CRUNCH INTO GOODNESS</span><h3>The nuts collection</h3><p>Almonds, cashews, pistachios & walnuts.</p><a href="#products" onclick="filterCategory('Nuts')">Shop nuts →</a></div></div><div class="collection-card"><img src="assets/collection-honey.jpg" alt="Honey collection"><div><span class="eyebrow">NATURAL SWEETNESS</span><h3>The honey collection</h3><p>Natural, raw & forest honey.</p><a href="#products" onclick="filterCategory('Honey')">Shop honey →</a></div></div><div class="collection-card"><img src="assets/collection-dates.jpg" alt="Dates collection"><div><span class="eyebrow">NATURALLY DELIGHTFUL</span><h3>The dates collection</h3><p>Ajwa, Medjool, Sukkari & more.</p><a href="#products" onclick="filterCategory('Dates')">Shop dates →</a></div></div></section>
+<section class="how-section" id="about"><div class="how-heading"><span class="eyebrow">A SIMPLE WAY TO SHOP</span><h2>Goodness is just<br><em>a few steps away.</em></h2><p>Choose your favourites. We’ll take care of the rest.</p></div><div class="steps"><div class="step"><span>01</span><div class="step-icon">＋</div><h3>Add to cart</h3><p>Choose your products and quantities.</p></div><div class="step"><span>02</span><div class="step-icon">▤</div><h3>Review your bag</h3><p>Check your items and delivery total.</p></div><div class="step"><span>03</span><div class="step-icon whatsapp">◉</div><h3>Send on WhatsApp</h3><p>Your complete order goes directly to us.</p></div><div class="step"><span>04</span><div class="step-icon">↗</div><h3>Confirm & pay</h3><p>We’ll share QR details for prepaid orders, or arrange COD.</p></div></div></section>
+</main>
+<footer id="footer"><div class="footer-main"><div class="footer-brand"><img src="assets/eyecon-logo-white.png" alt="EyeCon International"><p>Premium nuts, honey, dates and value combos for a little more goodness every day.</p><a class="footer-whatsapp" href="https://wa.me/919072295690" target="_blank">◉ Chat with us on WhatsApp</a></div><div><h4>Explore</h4><a href="#home">Home</a><a href="#combos">Combos</a><a href="#products">Shop all</a><a href="#categories">Categories</a></div><div><h4>Collections</h4><a href="#products">Nuts</a><a href="#products">Honey</a><a href="#products">Dates</a><a href="#combos">Value combos</a></div><div><h4>Customer care</h4><a href="#footer">Shipping & delivery</a><a href="#footer">Returns & refunds</a><a href="#footer">Privacy policy</a><a href="#footer">Terms & conditions</a></div></div><div class="footer-bottom"><span>© 2026 EyeCon Store. All rights reserved.</span><span>Thoughtfully selected. Simply delivered.</span></div></footer>
+<div class="shade" id="shade" onclick="closeCart()"></div><aside class="cart-panel" id="cart-panel"><div class="cart-head"><div><span class="eyebrow">YOUR SELECTION</span><h2>Shopping bag <small id="bag-count">(0)</small></h2></div><button onclick="closeCart()">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-summary"><div><span>Subtotal</span><b id="subtotal">₹0</b></div><div><span>Delivery</span><b id="delivery">₹60</b></div><div class="total"><span>Total</span><b id="total">₹60</b></div><p id="shipping-note">Free delivery on orders above ₹1,499. All combos ship free.</p><button class="button button-primary full" onclick="checkout()">Continue to checkout →</button></div></aside>
+<div class="modal-shade" id="checkout-modal"><div class="checkout-box"><button class="close-modal" onclick="closeCheckout()">×</button><span class="eyebrow">ALMOST THERE</span><h2>Delivery details</h2><p>Share your details and we’ll receive your complete order on WhatsApp.</p><form id="checkout-form"><label>Full name *<input name="name" required></label><label>Mobile number *<input name="phone" type="tel" required></label><label>House / building name *<input name="house" required></label><label>Street / area *<input name="street" required></label><label>Landmark<input name="landmark"></label><div class="form-row"><label>City / town *<input name="city" required></label><label>District *<input name="district" required></label></div><div class="form-row"><label>State *<input name="state" required></label><label>PIN code *<input name="pin" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required></label></div><fieldset><legend>Payment preference</legend><label class="radio"><input type="radio" name="payment" value="Prepaid — QR code to be shared on WhatsApp" checked> Prepaid (QR code shared on WhatsApp)</label><label class="radio"><input type="radio" name="payment" value="Cash on Delivery (COD)"> Cash on Delivery</label></fieldset><button class="button button-primary full" type="submit">Send order on WhatsApp →</button></form></div></div>
+<script src="app.js?v=2"></script>
+</body></html>
